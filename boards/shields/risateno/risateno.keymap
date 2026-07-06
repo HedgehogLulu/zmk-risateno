@@ -44,13 +44,13 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp S>, <&kp TAB>;
-        )
+        );
 
         ZMK_HOLD_TAP(ht_f_del,
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp F>, <&kp DEL>;
-        )
+        );
     };
 };
 &sk {
