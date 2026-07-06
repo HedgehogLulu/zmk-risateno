@@ -45,8 +45,7 @@
             label = "HOLD_TAP_S_TAB";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp S>;
-            hold-bindings = <&kp TAB>;
+            bindings = <&kp S>, <&kp TAB>;
         };
 
         ht_f_del: hold_tap_f_del {
@@ -54,8 +53,7 @@
             label = "HOLD_TAP_F_DEL";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp F>;
-            hold-bindings = <&kp DEL>;
+            bindings = <&kp F>, <&kp DEL>;
         };
     };
 };
