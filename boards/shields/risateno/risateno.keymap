@@ -40,17 +40,21 @@
 
 / {
     behaviors {
-        ZMK_HOLD_TAP(ht_s_tab,
+        ht_s_tab: hold_tap_s_tab {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp S>, <&kp TAB>;
-        );
+        };
 
-        ZMK_HOLD_TAP(ht_f_del,
+        ht_f_del: hold_tap_f_del {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp F>, <&kp DEL>;
-        );
+        };
     };
 };
 &sk {
