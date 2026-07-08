@@ -77,16 +77,14 @@
     release-after-ms = <STICKY_TIMEOUT>;
     quick-release;
 };
-// Глобальная настройка комбо-движка
-&combos {
+/ {
+  combos {
+    compatible = "zmk,combos";
     timeout-ms = <COMBO_TIMEOUT>;
     // Этот параметр заставляет комбо игнорировать тот факт, что клавиши находятся в режиме hold-tap
     // и прожимать их как обычные кнопки при одновременном нажатии.
     global-quick-tap;
-};
-/ {
-  combos {
-    compatible = "zmk,combos";
+
     #ifdef IS_RISATENO_RIGHT
       #include "chords_right.dtsi"
     #else
