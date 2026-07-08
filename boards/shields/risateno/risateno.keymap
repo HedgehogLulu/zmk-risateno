@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 // CONFIG
-#define COMBO_TIMEOUT 90
+#define COMBO_TIMEOUT 70
 #define COMBO_LAYERS 0 1
 #define STICKY_TIMEOUT 500
 
@@ -41,7 +41,7 @@
         ht_s_tab: hold_tap_s_tab {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -49,7 +49,7 @@
         ht_f_del: hold_tap_f_del {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -63,7 +63,14 @@
             &kp DOT
             &kp C &kp O &kp M
         >;
-    };
+        };
+        ht_media_play: hold_tap_media_play {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <150>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&kp>;
+        };
     };
 };
 &sk {
@@ -80,7 +87,7 @@
       #include "chords.dtsi"
     #endif
   };
-
+};
   keymap {
     compatible = "zmk,keymap";
 
@@ -91,14 +98,14 @@
     //             | LOT | LIT |   | RIT | ROT |
       bindings = <
         &kp Z &kp X &kp C &kp V                                  &trans &trans &trans &trans
-        &mt LSHIFT A &ht_s_tab S TAB &mt LCTRL D &ht_f_del F DEL  &trans &trans &trans &trans
+        &mt LSHIFT A &ht_s_tab TAB S  &mt LCTRL D &ht_f_del DEL F   &trans &trans &trans &trans
                                                &mo 1 &kp SPACE    &trans &trans
       >;
     };
     lower_layer {
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4              &trans &trans &trans &trans
-        &kp HOME &kp C_PREV &kp C_PLAY &kp C_NEXT       &trans &trans &trans &trans
+        &kp F1 &kp F2 &kp F5 &kp F11              &trans &trans &trans &trans
+        &kp HOME &kp C_PREV &ht_media_play C_PP C_PLAY &kp C_NEXT       &trans &trans &trans &trans
                           &trans &trans        &trans &trans
       >;
     };
