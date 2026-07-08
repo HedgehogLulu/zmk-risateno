@@ -77,7 +77,13 @@
     release-after-ms = <STICKY_TIMEOUT>;
     quick-release;
 };
-
+// Глобальная настройка комбо-движка
+&combos {
+    timeout-ms = <COMBO_TIMEOUT>;
+    // Этот параметр заставляет комбо игнорировать тот факт, что клавиши находятся в режиме hold-tap
+    // и прожимать их как обычные кнопки при одновременном нажатии.
+    global-quick-tap;
+};
 / {
   combos {
     compatible = "zmk,combos";
@@ -99,12 +105,12 @@
     //             | LOT | LIT |   | RIT | ROT |
       bindings = <
         &kp Z &kp X &kp C &kp V                                  &trans &trans &trans &trans
-        &mt LSHIFT A &ht_s_tab TAB S  &mt LCTRL D &ht_f_del DEL F   &trans &trans &trans &trans
+        &mt LSHIFT A &ht_s_tab TAB S  &mt LCTRL D &ht_f_del BSPC F   &trans &trans &trans &trans
                                                &mo 1 &kp SPACE    &trans &trans
       >;
     };
     lower_layer {
-      bindings = <
+        bindings = <
         &kp F1 &kp F2 &kp F5 &kp F11              &trans &trans &trans &trans
         &kp HOME &kp C_PREV &ht_media_play C_PP C_PLAY &kp C_NEXT       &trans &trans &trans &trans
                           &trans &trans        &trans &trans
