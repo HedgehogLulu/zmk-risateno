@@ -81,13 +81,54 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_test {
-            timeout-ms = <400>;
+        combo_enter {
+            timeout-ms = <COMBO_TIMEOUT>;
             bindings = <&kp RET>;
             key-positions = <6 7>;
             layers = <0 1>;
+         };
+
+        combo_esc {
+            timeout-ms = <COMBO_TIMEOUT>;
+            bindings = <&kp ESC>;
+            key-positions = <3 9>;
+            layers = <0 1>;
         };
-    };
+
+        combo_email {
+            timeout-ms = <COMBO_TIMEOUT>;
+            bindings = <&macro_email>;
+            key-positions = <8 9>;
+            layers = <0 1>;
+        };
+
+        combo_bootloader {
+            timeout-ms = <COMBO_TIMEOUT>;
+            bindings = <&bootloader>;
+            key-positions = <0 9>;
+            layers = <0>;
+        };
+
+        combo_bt0 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <4 9>;
+            layers = <0>;
+        };
+
+        combo_bt1 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <5 9>;
+            layers = <0>;
+        };
+
+        combo_bt_clear {
+            timeout-ms = <COMBO_TIMEOUT>;
+            bindings = <&bt BT_CLR>;
+            key-positions = <5 7>;
+            layers = <0>;
+        };
 };
 
 
@@ -115,4 +156,3 @@
     };
   };
 };
-
