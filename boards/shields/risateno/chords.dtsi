@@ -11,13 +11,13 @@
 
         combo_enter {
             timeout-ms = <200>;
-            key-positions = <6 7>;
+            key-positions = <4 6>;
             bindings = <&kp RET>;
         };
 
         combo_esc {
             timeout-ms = <200>;
-            key-positions = <4 5>;
+            key-positions = <5 7>;
             bindings = <&kp ESC>;
         };
     };
