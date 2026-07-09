@@ -72,12 +72,9 @@
         bindings = <&kp>, <&kp>;
         };
     };
-};
-&sk {
-    release-after-ms = <STICKY_TIMEOUT>;
-    quick-release;
-};
-/ {
+
+
+
     combos {
         compatible = "zmk,combos";
 
@@ -129,11 +126,11 @@
             key-positions = <5 7>;
             layers = <0>;
         };
-};
+    };
 
 
 
-/{ keymap {
+ keymap {
     compatible = "zmk,keymap";
 
     default_layer {
