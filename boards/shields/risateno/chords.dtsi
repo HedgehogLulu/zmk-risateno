@@ -10,15 +10,14 @@
 
         combo_enter {
             timeout-ms = <90>;
-            key-positions = <4 6>;
+            key-positions = <6 7>;
             bindings = <&kp RET>;
         };
 
         combo_esc {
             timeout-ms = <90>;
-            key-positions = <3 9>;
+            key-positions = <4 5>;
             bindings = <&kp ESC>;
-            require-prior-idle-ms = <50>;
         };
     };
 };
