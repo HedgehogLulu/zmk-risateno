@@ -1,17 +1,23 @@
-combo_boot_dual {
-    timeout-ms = <90>;
-    key-positions = <0 1>;
-    bindings = <&bootloader>;
-};
+/ {
+    combos {
+        compatible = "zmk,combos";
 
-combo_enter {
-    timeout-ms = <90>;
-    key-positions = <6 7>;
-    bindings = <&kp RET>;
-};
+        combo_boot_dual {
+            timeout-ms = <90>;
+            key-positions = <0 1>;
+            bindings = <&bootloader>;
+        };
 
-combo_esc {
-    timeout-ms = <90>;
-    key-positions = <3 9>;
-    bindings = <&kp ESC>;
+        combo_enter {
+            timeout-ms = <90>;
+            key-positions = <6 7>;
+            bindings = <&kp RET>;
+        };
+
+        combo_esc {
+            timeout-ms = <90>;
+            key-positions = <3 9>;
+            bindings = <&kp ESC>;
+        };
+    };
 };
