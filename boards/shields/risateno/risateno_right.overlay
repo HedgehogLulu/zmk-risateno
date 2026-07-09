@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "risateno.dtsi"
-
 #define IS_RISATENO_RIGHT
+
+#include "risateno.dtsi"
 
 &default_transform {
 	col-offset = <10>;

@@ -78,21 +78,19 @@
     quick-release;
 };
 / {
-        combos {
-    compatible = "zmk,combos";
-    global-quick-tap;
-    global-quick-tap-ms = <200>;
+   combos {
+        compatible = "zmk,combos";
+        global-quick-tap;
+        global-quick-tap-ms = <200>;
 
-    combo_test {
-        timeout-ms = <250>;
-        bindings = <&kp RET>;
-        key-positions = <6 7>;   // BLM = 6, BLI = 7
-        layers = <0 1>;
+        #include "chords.dtsi"
+        #ifdef IS_RISATENO_RIGHT
+          #include "chords_right.dtsi"
+        #endif
     };
-  };
 
 
-  
+
 
   keymap {
     compatible = "zmk,keymap";
@@ -103,9 +101,9 @@
     // | BLP | BLR | BLM | BLI |   | BRI | BRM | BRR | BRP |
     //             | LOT | LIT |   | RIT | ROT |
       bindings = <
-                &kp Z &kp X &kp C &kp V &trans &trans &trans &trans
-        &kp A &kp S &kp D &kp F &trans &trans &trans &trans   // ← временно обычные клавиши
-                                               &mo 1 &kp SPACE &trans &trans
+         &kp Z &kp X &kp C &kp V        &trans &trans &trans &trans
+         &mt LSHIFT A &ht_s_tab TAB S  &mt LCTRL D &ht_f_del BSPC F &trans &trans &trans &trans
+                                               &mo 1 &kp SPACE   &trans &trans
       >;
     };
     lower_layer {

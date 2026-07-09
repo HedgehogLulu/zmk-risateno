@@ -36,27 +36,3 @@ combo_r_T {
     key-positions = <BRR RIT>;
     layers = <0>;
 };
-combo_bootloader {
-    timeout-ms = <COMBO_TIMEOUT>;
-    bindings = <&bootloader>;
-    key-positions = <TRP RIT>;
-    layers = <COMBO_LAYERS>;
-};
-combo_bt0 {
-    timeout-ms = <COMBO_TIMEOUT>;
-    bindings = <&bt BT_SEL 0>;
-    key-positions = <BRP ROT>;
-    layers = <COMBO_LAYERS>;
-};
-combo_bt1 {
-    timeout-ms = <COMBO_TIMEOUT>;
-    bindings = <&bt BT_SEL 1>;
-    key-positions = <BRR ROT>;
-    layers = <COMBO_LAYERS>;
-};
-combo_bt_clear {
-    timeout-ms = <COMBO_TIMEOUT>;
-    bindings = <&bt BT_CLR>;
-    key-positions = <BRI BRR>;
-    layers = <0>;
-};
