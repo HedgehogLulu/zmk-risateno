@@ -1,6 +1,19 @@
+// chords.dtsi
+
+
+combo_boot_dual {
+    timeout-ms = <90>;
+    key-positions = <0 1>;
+    bindings = <&bootloader>;
+};
 combo_enter {
-    timeout-ms = <350>;   // было 200, сделай больше
-    bindings = <&kp RET>;
-    key-positions = <6 7>;   // BLM + BLI
-    layers = <0 1>;
+	timeout-ms = <90>;
+	bindings = <&kp RET>;
+	key-positions = <6 7>;
+};
+
+combo_esc {
+	timeout-ms = <90>;
+	bindings = <&kp ESC>;
+	key-positions = <3 9>;
 };
