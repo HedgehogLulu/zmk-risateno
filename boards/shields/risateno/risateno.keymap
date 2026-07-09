@@ -78,38 +78,20 @@
     quick-release;
 };
 / {
-      combos {
+        combos {
     compatible = "zmk,combos";
     global-quick-tap;
+    global-quick-tap-ms = <200>;
 
-    // Комбо для левой половины (без ifdef)
-    combo_enter {
-        timeout-ms = <COMBO_TIMEOUT>;
+    combo_test {
+        timeout-ms = <250>;
         bindings = <&kp RET>;
-        key-positions = <BLM BLI>;
+        key-positions = <6 7>;   // BLM = 6, BLI = 7
         layers = <0 1>;
     };
+  };
 
-    combo_esc {
-        timeout-ms = <COMBO_TIMEOUT>;
-        bindings = <&kp ESC>;
-        key-positions = <TLI LIT>;
-        layers = <0 1>;
-    };
 
-    combo_bt0 {
-        timeout-ms = <COMBO_TIMEOUT>;
-        bindings = <&bt BT_SEL 0>;
-        key-positions = <BLP LIT>;
-        layers = <0 1>;
-    };
-
-    combo_bt1 {
-        timeout-ms = <COMBO_TIMEOUT>;
-        bindings = <&bt BT_SEL 1>;
-        key-positions = <BLR LIT>;
-        layers = <0 1>;
-    };
   };
 
   keymap {
@@ -129,7 +111,7 @@
     lower_layer {
         bindings = <
         &kp F1 &kp F2 &kp F5 &kp F11              &trans &trans &trans &trans
-        &kp HOME &kp C_PREV &ht_media_play C_PAUSE C_PLAY &kp C_NEXT       &trans &trans &trans &trans
+        &kp HOME &kp C_PREV &ht_media_play C_PAUSE C_PLAY &kp C_NEXT       &trans &trans &trans &trans 
                           &trans &trans        &trans &trans
       >;
     };
