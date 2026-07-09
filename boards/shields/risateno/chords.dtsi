@@ -9,15 +9,17 @@
         };
 
         combo_enter {
-            timeout-ms = <90>;
+            timeout-ms = <150>;
             key-positions = <6 7>;
             bindings = <&kp RET>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_esc {
-            timeout-ms = <90>;
+            timeout-ms = <150>;
             key-positions = <4 5>;
             bindings = <&kp ESC>;
+            require-prior-idle-ms = <50>;
         };
     };
 };
