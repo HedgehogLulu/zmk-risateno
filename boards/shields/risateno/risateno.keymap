@@ -80,12 +80,19 @@
 / {
     combos {
         compatible = "zmk,combos";
-        #include "chords.dtsi"
+
+        combo_test {
+            timeout-ms = <400>;
+            bindings = <&kp RET>;
+            key-positions = <6 7>;
+            layers = <0 1>;
+        };
     };
+};
 
 
 
-  keymap {
+/{ keymap {
     compatible = "zmk,keymap";
 
     default_layer {
