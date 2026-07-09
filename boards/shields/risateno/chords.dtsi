@@ -4,22 +4,21 @@
 
         combo_boot_dual {
             timeout-ms = <90>;
-            key-positions = <0 1 8>;
+            key-positions = <0 1>;
             bindings = <&bootloader>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_enter {
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             key-positions = <6 7>;
             bindings = <&kp RET>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_esc {
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             key-positions = <4 5>;
             bindings = <&kp ESC>;
-            require-prior-idle-ms = <50>;
         };
     };
 };
