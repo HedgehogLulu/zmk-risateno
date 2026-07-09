@@ -11,14 +11,15 @@
 
         combo_enter {
             timeout-ms = <200>;
-            key-positions = <6 9>;  
+            key-positions = <1 2>;
             bindings = <&kp RET>;
         };
 
         combo_esc {
             timeout-ms = <200>;
-            key-positions = <5 9>;
+            key-positions = <2 3>;
             bindings = <&kp ESC>;
         };
     };
 };
+
